@@ -1,0 +1,336 @@
+/* ====================
+   RESET GLOBAL
+==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====================
+   TIPOGRAFIA
+==================== */
+h1 {
+  font-family: 'Rubik', sans-serif;
+  text-shadow: 4px 4px 6px #000;
+  font-weight: 700;
+  font-size: max(44px, 5.2vw);
+}
+
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  text-shadow: 4px 4px 6px #464646;
+  font-weight: 700;
+  font-size: max(20px, 2.8vw);
+}
+
+@font-face {
+  font-family: 'Tasteful Sandwich';
+  src: url(../fontes/Tasteful\ Sandwich\ Italic.otf);
+}
+
+/* ====================
+   HEADER e BANNER
+==================== */
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center center;
+  z-index: -1;
+}
+
+#banner-fallback {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* ====================
+   NAVBAR - ESTRUTURA GERAL
+==================== */
+nav#nav-esquerda {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header nav#nav-esquerda ul#icone-menu li ion-icon {
+  font-size: 40px;
+  color: #dae0e9; /* Ou qualquer cor que contraste com seu fundo */
+  margin-right: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+header nav#nav-esquerda ul#icone-menu li ion-icon:hover {
+  color: #84B9BF;
+}
+
+ul#icone-menu {
+  display: none;
+}
+
+ul#icone-menu li {
+  list-style: none;
+}
+
+ul#icone-menu li ion-icon {
+  font-size: 50px;
+  color: #011F26;
+  margin-right: 2rem;
+}
+
+/* ====================
+   MENU MOBILE (ATÉ 767px)
+==================== */
+@media screen and (max-width: 767px) {
+  ul#icone-menu {
+    display: flex;
+  }
+
+nav#nav-esquerda ul.menu-principal {
+  display: none;
+  flex-direction: column;
+  width: 65%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid #84B9BF;
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  padding: 1.5rem;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  z-index: 999;
+}
+
+nav#nav-esquerda ul.menu-principal li {
+  list-style: none;
+}
+
+nav#nav-esquerda ul.menu-principal li a {
+  background-color: rgba(48, 105, 161, 0.4);
+  color: #273335;
+  border: 1px solid #84B9BF;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-family: 'Tasteful Sandwich', cursive;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 14px 24px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  display: block;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-shadow: 0 0 2px #84B9BF;
+}
+
+nav#nav-esquerda ul.menu-principal li a:hover {
+  background-color: #84B9BF;
+  color: #011F26;
+  transform: translateX(4px);
+}
+
+  #banner-video {
+    display: none;
+  }
+
+  #banner-fallback {
+    display: block;
+    background-image: url(../imagens/640.png);
+    background-size: contain;
+    background-position: center top;
+    background-color: #56bad1;
+  }
+
+  .feature-section .row {
+    flex-direction: column;
+  }
+
+  .feature-img {
+    max-width: 60%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ====================
+   MENU DESKTOP (768px+)
+==================== */
+@media screen and (min-width: 768px) {
+  nav#nav-esquerda ul.menu-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    z-index: 10;
+  }
+
+  nav#nav-esquerda ul.menu-principal li {
+    margin: 0;
+    list-style: none;
+  }
+
+nav#nav-esquerda ul.menu-principal li a {
+  background-color: rgba(175, 93, 45, 0.548);
+  border: 1px solid #84B9BF;
+  color: #0a0c0c;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 14px 24px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+  nav#nav-esquerda ul.menu-principal li a:hover {
+  background-color: #84B9BF;
+  color: #011F26;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+  ul#icone-menu {
+    display: none !important;
+  }
+
+  #banner-fallback {
+    background-image: url(../imagens/banner-tablet.png);
+  }
+}
+
+/* ====================
+   CONTEÚDO GERAL
+==================== */
+.feature-section {
+  width: 100%;
+  background-color: #19439e;
+  color: #F2E4BB;
+  padding: 80px 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.feature-section.alt-bg {
+  background-color: #044159;
+}
+
+.feature-section .container {
+  max-width: 1140px;
+}
+
+.feature-section h2 {
+  font-family: 'Tasteful Sandwich', cursive;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #e2e7e7;
+}
+
+.feature-section p {
+  font-family: 'PT Serif', serif;
+  font-size: max(16px, 1.1vw);
+  line-height: 1.6;
+}
+
+.feature-img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ====================
+   CONTATOS
+==================== */
+
+.contato-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(10,40,60,0.8), rgba(5,20,30,0.8));
+  backdrop-filter: blur(12px);
+  border-top: 2px solid #84B9BF;
+  color: #F2E4BB;
+  text-align: center;
+}
+
+.contato-section h2 {
+  font-family: 'Tasteful Sandwich', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #e2e7e7;
+}
+
+.contato-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.contato-links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contato-links li ion-icon {
+  font-size: 1.5rem;
+  color: #84B9BF;
+}
+
+.contato-links li a {
+  text-decoration: none;
+  color: #F2E4BB;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contato-links li a:hover {
+  color: #84B9BF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
