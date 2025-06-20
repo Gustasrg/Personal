@@ -78,7 +78,7 @@ nav#nav-esquerda {
 
 header nav#nav-esquerda ul#icone-menu li ion-icon {
   font-size: 40px;
-  color: #dae0e9; /* Ou qualquer cor que contraste com seu fundo */
+  color: #dae0e9;
   margin-right: 2rem;
   cursor: pointer;
   transition: color 0.3s ease;
