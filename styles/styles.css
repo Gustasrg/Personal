@@ -1,15 +1,9 @@
-/* ====================
-   RESET GLOBAL
-==================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ====================
-   TIPOGRAFIA
-==================== */
 h1 {
   font-family: 'Rubik', sans-serif;
   text-shadow: 4px 4px 6px #000;
